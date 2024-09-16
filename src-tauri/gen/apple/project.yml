@@ -1,6 +1,6 @@
 name: corche-music
 options:
-  bundleIdPrefix: kr.ny64.music
+  bundleIdPrefix: com.sqlare.corche.music
   deploymentTarget:
     iOS: 13.0
 fileGroups: [../../src]
@@ -11,7 +11,7 @@ settingGroups:
   app:
     base:
       PRODUCT_NAME: corche-music
-      PRODUCT_BUNDLE_IDENTIFIER: kr.ny64.music
+      PRODUCT_BUNDLE_IDENTIFIER: com.sqlare.corche.music
       CODE_SIGN_STYLE: Automatic
 targetTemplates:
   app:

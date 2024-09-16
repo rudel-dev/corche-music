@@ -28,7 +28,7 @@
 		365C6A5E69B01CD798C240D5 /* libny_music_lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libny_music_lib.a; sourceTree = "<group>"; };
 		37BD0DB48684BB55D4B2927D /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		3A8194B5A7D9D24ADED3E1B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		4F9D69B94FDABD8E4BFFFE5F /* ny-music_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ny-music_iOS.entitlements"; sourceTree = "<group>"; };
+		4F9D69B94FDABD8E4BFFFE5F /* corche-music_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "corche-music_iOS.entitlements"; sourceTree = "<group>"; };
 		660713F91A73E5D4C0B02B86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8051696B2B0976A0EEA8197C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8E94107E12973AE7077CEEB1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -38,7 +38,7 @@
 		9E5932FB28463DBDC503C789 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		B394F8208D62B080A793899E /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = SOURCE_ROOT; };
 		B9E50ACA7C84E014CA529089 /* main.rs */ = {isa = PBXFileReference; path = main.rs; sourceTree = "<group>"; };
-		C2C8B840D114BB7FFC73F401 /* ny-music_iOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "ny-music_iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2C8B840D114BB7FFC73F401 /* corche-music_iOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "corche-music_iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC701917CD3D47CC361380D2 /* lib.rs */ = {isa = PBXFileReference; path = lib.rs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,28 +61,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00046C6D768B0326729E576B /* ny-music_iOS */ = {
+		00046C6D768B0326729E576B /* corche-music_iOS */ = {
 			isa = PBXGroup;
 			children = (
 				1D04DEF35EEA9831F4ABAA49 /* Info.plist */,
-				4F9D69B94FDABD8E4BFFFE5F /* ny-music_iOS.entitlements */,
+				4F9D69B94FDABD8E4BFFFE5F /* corche-music_iOS.entitlements */,
 			);
-			path = "ny-music_iOS";
+			path = "corche-music_iOS";
 			sourceTree = "<group>";
 		};
-		0478220BAA85AF1BA98E3296 /* ny-music */ = {
+		0478220BAA85AF1BA98E3296 /* corche-music */ = {
 			isa = PBXGroup;
 			children = (
 				9E5932FB28463DBDC503C789 /* main.mm */,
 				650B9258631FF3C58C2C1239 /* bindings */,
 			);
-			path = "ny-music";
+			path = "corche-music";
 			sourceTree = "<group>";
 		};
 		2D135C298FFA0756083A3997 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C2C8B840D114BB7FFC73F401 /* ny-music_iOS.app */,
+				C2C8B840D114BB7FFC73F401 /* corche-music_iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,7 +134,7 @@
 				660713F91A73E5D4C0B02B86 /* Assets.xcassets */,
 				0C8E8398CB345A189014F4E8 /* LaunchScreen.storyboard */,
 				A760F1912303CD0A834B6591 /* Externals */,
-				00046C6D768B0326729E576B /* ny-music_iOS */,
+				00046C6D768B0326729E576B /* corche-music_iOS */,
 				E610ADD408121403F0E30862 /* Sources */,
 				693CA781DA00755B05352A05 /* src */,
 				3D2EE92A94C46B151AF03A33 /* Frameworks */,
@@ -145,7 +145,7 @@
 		E610ADD408121403F0E30862 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				0478220BAA85AF1BA98E3296 /* ny-music */,
+				0478220BAA85AF1BA98E3296 /* corche-music */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -153,9 +153,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		211F29E45E85154226486CDD /* ny-music_iOS */ = {
+		211F29E45E85154226486CDD /* corche-music_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9453ED154E7CC1428294D4B8 /* Build configuration list for PBXNativeTarget "ny-music_iOS" */;
+			buildConfigurationList = 9453ED154E7CC1428294D4B8 /* Build configuration list for PBXNativeTarget "corche-music_iOS" */;
 			buildPhases = (
 				6A32ABC405274B57700248DF /* Build Rust Code */,
 				C4F4906623BA67137008219B /* Sources */,
@@ -166,9 +166,9 @@
 			);
 			dependencies = (
 			);
-			name = "ny-music_iOS";
-			productName = "ny-music_iOS";
-			productReference = C2C8B840D114BB7FFC73F401 /* ny-music_iOS.app */;
+			name = "corche-music_iOS";
+			productName = "corche-music_iOS";
+			productReference = C2C8B840D114BB7FFC73F401 /* corche-music_iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -185,7 +185,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8A3067A324AE5E53AAA61EC6 /* Build configuration list for PBXProject "ny-music" */;
+			buildConfigurationList = 8A3067A324AE5E53AAA61EC6 /* Build configuration list for PBXProject "corche-music" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -197,7 +197,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				211F29E45E85154226486CDD /* ny-music_iOS */,
+				211F29E45E85154226486CDD /* corche-music_iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -261,7 +261,7 @@
 					"arm64-sim",
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "ny-music_iOS/ny-music_iOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "corche-music_iOS/corche-music_iOS.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				ENABLE_BITCODE = NO;
@@ -271,7 +271,7 @@
 					"$(inherited)",
 					"\".\"",
 				);
-				INFOPLIST_FILE = "ny-music_iOS/Info.plist";
+				INFOPLIST_FILE = "corche-music_iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -280,7 +280,7 @@
 				"LIBRARY_SEARCH_PATHS[arch=arm64]" = "$(inherited) $(PROJECT_DIR)/Externals/arm64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
 				"LIBRARY_SEARCH_PATHS[arch=x86_64]" = "$(inherited) $(PROJECT_DIR)/Externals/x86_64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.ny64.music;
-				PRODUCT_NAME = "ny-music";
+				PRODUCT_NAME = "corche-music";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64  arm64-sim";
@@ -415,7 +415,7 @@
 					"arm64-sim",
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "ny-music_iOS/ny-music_iOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "corche-music_iOS/corche-music_iOS.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				ENABLE_BITCODE = NO;
@@ -425,7 +425,7 @@
 					"$(inherited)",
 					"\".\"",
 				);
-				INFOPLIST_FILE = "ny-music_iOS/Info.plist";
+				INFOPLIST_FILE = "corche-music_iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -434,7 +434,7 @@
 				"LIBRARY_SEARCH_PATHS[arch=arm64]" = "$(inherited) $(PROJECT_DIR)/Externals/arm64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
 				"LIBRARY_SEARCH_PATHS[arch=x86_64]" = "$(inherited) $(PROJECT_DIR)/Externals/x86_64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.ny64.music;
-				PRODUCT_NAME = "ny-music";
+				PRODUCT_NAME = "corche-music";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64  arm64-sim";
@@ -444,7 +444,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8A3067A324AE5E53AAA61EC6 /* Build configuration list for PBXProject "ny-music" */ = {
+		8A3067A324AE5E53AAA61EC6 /* Build configuration list for PBXProject "corche-music" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7EF1A8CAE91CA8C474E7C631 /* debug */,
@@ -453,7 +453,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = debug;
 		};
-		9453ED154E7CC1428294D4B8 /* Build configuration list for PBXNativeTarget "ny-music_iOS" */ = {
+		9453ED154E7CC1428294D4B8 /* Build configuration list for PBXNativeTarget "corche-music_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				059120C13286EA1201A8C1DB /* debug */,

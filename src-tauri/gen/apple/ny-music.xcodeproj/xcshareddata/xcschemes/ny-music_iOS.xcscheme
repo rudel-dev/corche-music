@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "211F29E45E85154226486CDD"
-               BuildableName = "ny-music_iOS.app"
-               BlueprintName = "ny-music_iOS"
-               ReferencedContainer = "container:ny-music.xcodeproj">
+               BuildableName = "corche-music_iOS.app"
+               BlueprintName = "corche-music_iOS"
+               ReferencedContainer = "container:corche-music.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "211F29E45E85154226486CDD"
-            BuildableName = "ny-music_iOS.app"
-            BlueprintName = "ny-music_iOS"
-            ReferencedContainer = "container:ny-music.xcodeproj">
+            BuildableName = "corche-music_iOS.app"
+            BlueprintName = "corche-music_iOS"
+            ReferencedContainer = "container:corche-music.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "211F29E45E85154226486CDD"
-            BuildableName = "ny-music_iOS.app"
-            BlueprintName = "ny-music_iOS"
-            ReferencedContainer = "container:ny-music.xcodeproj">
+            BuildableName = "corche-music_iOS.app"
+            BlueprintName = "corche-music_iOS"
+            ReferencedContainer = "container:corche-music.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -101,9 +101,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "211F29E45E85154226486CDD"
-            BuildableName = "ny-music_iOS.app"
-            BlueprintName = "ny-music_iOS"
-            ReferencedContainer = "container:ny-music.xcodeproj">
+            BuildableName = "corche-music_iOS.app"
+            BlueprintName = "corche-music_iOS"
+            ReferencedContainer = "container:corche-music.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>

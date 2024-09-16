@@ -1,13 +1,13 @@
 # Uncomment the next line to define a global platform for your project
 
-target 'ny-music_iOS' do
+target 'corche-music_iOS' do
 platform :ios, '13.0'
-  # Pods for ny-music_iOS
+  # Pods for corche-music_iOS
 end
 
-target 'ny-music_macOS' do
+target 'corche-music_macOS' do
 platform :osx, '11.0'
-  # Pods for ny-music_macOS
+  # Pods for corche-music_macOS
 end
 
 # Delete the deployment target for iOS and macOS, causing it to be inherited from the Podfile

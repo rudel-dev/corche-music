@@ -119,12 +119,12 @@ fn custom_css() -> String {
     #[allow(deprecated)]
     let home = std::env::home_dir().unwrap().to_str().unwrap().to_owned();
 
-    std::fs::read_to_string(format!("{home}/.config/ny-music/theme.css")).unwrap_or_else(|_| {
+    std::fs::read_to_string(format!("{home}/.config/corche-music/theme.css")).unwrap_or_else(|_| {
         std::fs::create_dir(format!("{home}/.config")).unwrap_or_else(|_| {});
-        std::fs::create_dir(format!("{home}/.config/ny-music")).unwrap_or_else(|_| {});
+        std::fs::create_dir(format!("{home}/.config/corche-music")).unwrap_or_else(|_| {});
 
         std::fs::write(
-            format!("{home}/.config/ny-music/theme.css"),
+            format!("{home}/.config/corche-music/theme.css"),
             ":root {\n\t--gray: #313244;\n\t--black: #1e1e2e;\n\t--primary: #a6e3a1;\n}",
         )
         .unwrap_or_else(|_| {});
@@ -146,12 +146,12 @@ fn custom_css() -> String {
     #[allow(deprecated)]
     let home = std::env::home_dir().unwrap().to_str().unwrap().to_owned();
 
-    std::fs::read_to_string(format!("{home}/.config/ny-music/theme.css")).unwrap_or_else(|_| {
+    std::fs::read_to_string(format!("{home}/.config/corche-music/theme.css")).unwrap_or_else(|_| {
         std::fs::create_dir(format!("{home}/.config")).unwrap_or_else(|_| {});
-        std::fs::create_dir(format!("{home}/.config/ny-music")).unwrap_or_else(|_| {});
+        std::fs::create_dir(format!("{home}/.config/corche-music")).unwrap_or_else(|_| {});
 
         std::fs::write(
-            format!("{home}/.config/ny-music/theme.css"),
+            format!("{home}/.config/corche-music/theme.css"),
             ":root {\n\t--gray: #313244;\n\t--black: #1e1e2e;\n\t--primary: #a6e3a1;\n}\nhtml,body {\n\tbackground: #11111b;\n}",
         )
         .unwrap_or_else(|_| {});

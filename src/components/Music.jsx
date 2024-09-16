@@ -1,3 +1,5 @@
+const server = 'https://f.sqlare.com/CORCHE_Cover/'
+
 export default function Music({ musicEntry, onClick, q, playing, savedMusic }) {
     let [name, music] = musicEntry;
     var [savedMusic, setSavedMusic] = savedMusic
@@ -20,7 +22,7 @@ export default function Music({ musicEntry, onClick, q, playing, savedMusic }) {
 
         {
             Object.entries(savedMusic).map(e => e[0]).indexOf(name) != -1 ? <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" onClick={() => {
-                const dbOpen = indexedDB.open("ny-music");
+                const dbOpen = indexedDB.open("corche-music");
                 dbOpen.onsuccess = () => {
                     const db = dbOpen.result;
                     /** @type {IDBTransaction} */
@@ -42,17 +44,17 @@ export default function Music({ musicEntry, onClick, q, playing, savedMusic }) {
                 <path fill="var(--primary)" d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm113-303L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
             </svg> :
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" onClick={() => {
-                    const dbOpen = indexedDB.open("ny-music");
+                    const dbOpen = indexedDB.open("corche-music");
 
                     dbOpen.onsuccess = () => {
                         const db = dbOpen.result;
                         /** @type {IDBTransaction} */
                         // const transaction = db.transaction("musics", "readwrite");
                         // const musics = transaction.objectStore("musics");
-                        fetch(`https://f.imnyang.xyz/NY64_Cover/Cover/${name}.mp3`)
+                        fetch(`${server}/Cover/${name}.mp3`)
                             .then(res => res.blob())
                             .then(cover => {
-                                fetch(`https://f.imnyang.xyz/NY64_Cover/Image/${name}.webp`)
+                                fetch(`${server}/Image/${name}.webp`)
                                     .then(res => res.blob())
                                     .then(image => {
                                         const transaction = db.transaction(["musics"], "readwrite");

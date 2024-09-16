@@ -1,4 +1,4 @@
-name: ny-music
+name: corche-music
 options:
   bundleIdPrefix: kr.ny64.music
   deploymentTarget:
@@ -10,7 +10,7 @@ configs:
 settingGroups:
   app:
     base:
-      PRODUCT_NAME: ny-music
+      PRODUCT_NAME: corche-music
       PRODUCT_BUNDLE_IDENTIFIER: kr.ny64.music
       CODE_SIGN_STYLE: Automatic
 targetTemplates:
@@ -25,20 +25,20 @@ targetTemplates:
     settings:
       groups: [app]
 targets:
-  ny-music_iOS:
+  corche-music_iOS:
     type: application
     platform: iOS
     sources:
       - path: Sources
       - path: Assets.xcassets
       - path: Externals
-      - path: ny-music_iOS
+      - path: corche-music_iOS
       - path: assets
         buildPhase: resources
         type: folder
       - path: LaunchScreen.storyboard
     info:
-      path: ny-music_iOS/Info.plist
+      path: corche-music_iOS/Info.plist
       properties:
         LSRequiresIPhoneOS: true
         UILaunchStoryboardName: LaunchScreen
@@ -55,7 +55,7 @@ targets:
         CFBundleShortVersionString: 0.0.0
         CFBundleVersion: 0.0.0
     entitlements:
-      path: ny-music_iOS/ny-music_iOS.entitlements
+      path: corche-music_iOS/corche-music_iOS.entitlements
     scheme:
       environmentVariables:
         RUST_BACKTRACE: full

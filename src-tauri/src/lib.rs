@@ -35,15 +35,10 @@ pub fn run() {
 
     tauri::Builder::default()
         .plugin(tauri_plugin_shell::init())
-        .invoke_handler(tauri::generate_handler![discord_status, custom_css])
+        .invoke_handler(tauri::generate_handler![custom_css])
         .setup(|app| {
             let ww = app.webview_windows();
             let window = app.get_webview_window("main").unwrap();
-            #[cfg(target_os = "windows")]
-            {
-                window.open_devtools();
-                window.close_devtools();
-            }
             #[cfg(target_os = "macos")]
             apply_vibrancy(&window, NSVisualEffectMaterial::HudWindow, None, None)
                 .expect("Unsupported platform! 'apply_vibrancy' is only supported on macOS");
@@ -58,60 +53,60 @@ pub fn run() {
         .expect("error while running tauri application");
 }
 
-#[cfg(target_os = "windows")]
-fn discord_status(name: String) {}
-
-#[tauri::command]
-#[cfg(not(target_os = "macos"))]
-fn discord_status(name: String) {}
-
-#[tauri::command]
-#[cfg(target_os = "macos")]
-fn discord_status(name: String) {
-    thread::spawn(move || {
-        if !is_process_running("Discord") {
-            return;
-        }
-
-        {
-            let client = D_CLIENT.lock();
-            if client.is_err() {
-                return;
-            }
-            let mut client = client.unwrap();
-            if name == "" {
-                client.clear_activity().unwrap_or_else(|_| {
-                    client.connect().unwrap_or(());
-                    client.clear_activity().unwrap_or(())
-                });
-            } else {
-                let start = SystemTime::now();
-                let since_the_epoch = start
-                    .duration_since(UNIX_EPOCH)
-                    .expect("Time went backwards")
-                    .as_secs();
-                client
-                    .set_activity(
-                        activity::Activity::new()
-                            .timestamps(Timestamps::new().start(since_the_epoch as i64))
-                            .assets(Assets::new().large_image("hedgehog"))
-                            .details(&format!("Listening to {name:?}")),
-                    )
-                    .unwrap_or_else(|_| {
-                        client.connect().unwrap_or(());
-                        client
-                            .set_activity(
-                                activity::Activity::new()
-                                    .timestamps(Timestamps::new().start(since_the_epoch as i64))
-                                    .assets(Assets::new().large_image("hedgehog"))
-                                    .details(&format!("Listening to {name:?}")),
-                            )
-                            .unwrap_or(())
-                    });
-            }
-        }
-    });
-}
+// #[cfg(target_os = "windows")]
+// fn discord_status(name: String) {}
+//
+// #[tauri::command]
+// #[cfg(not(target_os = "macos"))]
+// fn discord_status(name: String) {}
+//
+// #[tauri::command]
+// #[cfg(target_os = "macos")]
+// fn discord_status(name: String) {
+//     thread::spawn(move || {
+//         if !is_process_running("Discord") {
+//             return;
+//         }
+//
+//         {
+//             let client = D_CLIENT.lock();
+//             if client.is_err() {
+//                 return;
+//             }
+//             let mut client = client.unwrap();
+//             if name == "" {
+//                 client.clear_activity().unwrap_or_else(|_| {
+//                     client.connect().unwrap_or(());
+//                     client.clear_activity().unwrap_or(())
+//                 });
+//             } else {
+//                 let start = SystemTime::now();
+//                 let since_the_epoch = start
+//                     .duration_since(UNIX_EPOCH)
+//                     .expect("Time went backwards")
+//                     .as_secs();
+//                 client
+//                     .set_activity(
+//                         activity::Activity::new()
+//                             .timestamps(Timestamps::new().start(since_the_epoch as i64))
+//                             .assets(Assets::new().large_image("hedgehog"))
+//                             .details(&format!("Listening to {name:?}")),
+//                     )
+//                     .unwrap_or_else(|_| {
+//                         client.connect().unwrap_or(());
+//                         client
+//                             .set_activity(
+//                                 activity::Activity::new()
+//                                     .timestamps(Timestamps::new().start(since_the_epoch as i64))
+//                                     .assets(Assets::new().large_image("hedgehog"))
+//                                     .details(&format!("Listening to {name:?}")),
+//                             )
+//                             .unwrap_or(())
+//                     });
+//             }
+//         }
+//     });
+// }
 
 #[tauri::command]
 #[cfg(target_os = "macos")]
